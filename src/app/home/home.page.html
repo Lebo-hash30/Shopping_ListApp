@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+<ion-input type="text" placeholder="Enter item" [(ngModel)]="Enteritem" ></ion-input>
+
+
+  <div class="postion">
+
+
+    <ion-button color="secondary" expand="small" fill="outline" (click)="addList()"  style="padding-left: 30%; margin-top: 10%; ">ADD</ion-button>
+
+  </div>
+
+  <div *ngFor="let item of list ; let i =index">
+    <p>{{item.Enteritem}}</p>
+
+    <ion-button (click)="deleteList(i)" color="tertiary" size="small"  style="padding-left: 5%;">
+      DELETE
+    </ion-button>
+
+    <ion-button (click)="updateUser()" color="warning" size="small"  style="padding-left: 20%;">
+      UPDATE
+    </ion-button>
+
+  </div>
+
+
+  
+
+
+
+</ion-content>
